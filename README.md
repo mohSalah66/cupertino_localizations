@@ -1,6 +1,6 @@
 # Cupertino Localizations
 This package is to reslove the issue with 
-```The getter 'pasteButtonLabel' was called on null.```
+```The getter 'pasteButtonLabel' was called on null.``` on IOS when selecting a text.
 
 ## Usage
 ```
