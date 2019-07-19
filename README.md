@@ -24,4 +24,4 @@ MaterialApp(
 Feel free to send me a pull request to add you Langage
 
 ## Acknowledgment
-This library base on the work of [Thank you crazy365966834](https://github.com/crazy365966834 flutter_cupertino_localizations/)
+This library base on the work of [Thank you crazy365966834](https://github.com/crazy365966834/flutter_cupertino_localizations/)
