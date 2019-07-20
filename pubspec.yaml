@@ -1,7 +1,7 @@
 name: cupertino_localizations
 description: You can use it to fixed the error The getter 'pasteButtonLabel' was called on null. if you wan't use DefaultCupertinoLocalizations.
-version: 0.0.1
-author: Mohammed Salah Abdallah <mohpro66@gmail.com>  
+version: 1.0.0+1
+author: Mohammed Salah <mohpro66@gmail.com>  
 homepage: https://github.com/mohSalah66/cupertino_localizations
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  intl: ^0.15.8
 
 dev_dependencies:
   flutter_test:
