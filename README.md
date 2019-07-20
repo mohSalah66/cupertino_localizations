@@ -1,25 +1,31 @@
-# Cupertino Localizations
-This package is to reslove the issue with 
-```The getter 'pasteButtonLabel' was called on null.``` on IOS when selecting a text.
+# cupertino_localizations
+
+provider localization for cupertino.
+just en,ar and zh
+
+You can use it to fixed the error:
+```The getter 'pasteButtonLabel' was called on null.```
+if you wan't use ```DefaultCupertinoLocalizations```.
+
+
 
 ## Usage
 ```
 MaterialApp(
-  locale: Locale('ar', ''),
+  locale: Locale('zh', 'CH'),
   localizationsDelegates: [
     GlobalCupertinoLocalizations.delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,
   ],
   supportedLocales: [
+    const Locale('zh', 'CH'),
     const Locale('ar', ''),
     const Locale('en', 'US'),
   ],
  ...
 }
 ```
-
-
 ## Contributing
 Feel free to send me a pull request to add your langage.
 
