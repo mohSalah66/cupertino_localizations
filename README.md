@@ -12,7 +12,7 @@ if you wan't use ```DefaultCupertinoLocalizations```.
 ## Usage
 ```
 MaterialApp(
-  locale: Locale('zh', 'CH'),
+  locale: Locale('ar', ''),
   localizationsDelegates: [
     GlobalCupertinoLocalizations.delegate,
     GlobalMaterialLocalizations.delegate,
