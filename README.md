@@ -1,16 +1,10 @@
 # cupertino_localizations
 
-provider localization for cupertino.
-just en,ar and zh
-
-You can use it to fixed the error:
-```The getter 'pasteButtonLabel' was called on null.```
-if you wan't use ```DefaultCupertinoLocalizations```.
-
-
+provider localization for cupertino. just en,ar and zh
+You can use it to fixed the error: The getter 'pasteButtonLabel' was called on null.
 
 ## Usage
-```
+```dart
 MaterialApp(
   locale: Locale('ar', ''),
   localizationsDelegates: [
