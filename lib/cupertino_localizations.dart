@@ -4,7 +4,6 @@
 
 /// Localizations for the Flutter library
 
-
 library cupertino_localizations;
 
 export 'src/l10n/localizations.dart';

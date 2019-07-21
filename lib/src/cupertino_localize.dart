@@ -8,12 +8,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:cupertino_localizations/src/l10n/localizations.dart' as thisPackage;
+import 'package:cupertino_localizations/src/l10n/localizations.dart'
+    as thisPackage;
 import 'package:intl/intl.dart' as intl;
 
 abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   GlobalCupertinoLocalizations({@required this.locale}) {
-    GlobalMaterialLocalizations.delegate.load(locale).then((value) => _localizations = value);
+    GlobalMaterialLocalizations.delegate
+        .load(locale)
+        .then((value) => _localizations = value);
   }
 
   final Locale locale;
@@ -25,7 +28,8 @@ abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   /// Most internationalized apps will use [GlobalCupertinoLocalizations.delegates]
   /// as the value of [MaterialApp.localizationsDelegates] to include
   /// the localizations for both the material and widget libraries.
-  static const LocalizationsDelegate<CupertinoLocalizations> delegate = _CupertinoLocalizationsDelegate();
+  static const LocalizationsDelegate<CupertinoLocalizations> delegate =
+      _CupertinoLocalizationsDelegate();
 
   /// A value for [MaterialApp.localizationsDelegates] that's typically used by
   /// internationalized apps.
@@ -48,7 +52,8 @@ abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   ///   // ...
   /// )
   /// ```
-  static const List<LocalizationsDelegate<dynamic>> delegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> delegates =
+      <LocalizationsDelegate<dynamic>>[
     GlobalCupertinoLocalizations.delegate,
   ];
 
@@ -56,7 +61,8 @@ abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   String get alertDialogLabel => _localizations.alertDialogLabel;
 
   @override
-  String get anteMeridiemAbbreviation => _localizations.anteMeridiemAbbreviation;
+  String get anteMeridiemAbbreviation =>
+      _localizations.anteMeridiemAbbreviation;
 
   @override
   String get copyButtonLabel => _localizations.copyButtonLabel;
@@ -68,7 +74,8 @@ abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   String get pasteButtonLabel => _localizations.pasteButtonLabel;
 
   @override
-  String get postMeridiemAbbreviation => _localizations.postMeridiemAbbreviation;
+  String get postMeridiemAbbreviation =>
+      _localizations.postMeridiemAbbreviation;
 
   @override
   String get selectAllButtonLabel => _localizations.selectAllButtonLabel;
@@ -119,22 +126,28 @@ abstract class GlobalCupertinoLocalizations implements CupertinoLocalizations {
   }
 }
 
-class _CupertinoLocalizationsDelegate extends LocalizationsDelegate<CupertinoLocalizations> {
+class _CupertinoLocalizationsDelegate
+    extends LocalizationsDelegate<CupertinoLocalizations> {
   const _CupertinoLocalizationsDelegate();
-  
-  @override
-  bool isSupported(Locale locale) =>  kMaterialSupportedLanguages.contains(locale.languageCode);//isSupported(locale);
 
-  static final Map<Locale, Future<CupertinoLocalizations>> _loadedTranslations = <Locale, Future<CupertinoLocalizations>>{};
+  @override
+  bool isSupported(Locale locale) => kMaterialSupportedLanguages
+      .contains(locale.languageCode); //isSupported(locale);
+
+  static final Map<Locale, Future<CupertinoLocalizations>> _loadedTranslations =
+      <Locale, Future<CupertinoLocalizations>>{};
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) {
     assert(isSupported(locale));
     return _loadedTranslations.putIfAbsent(locale, () {
-      final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      final String localeName =
+          intl.Intl.canonicalizedLocale(locale.toString());
 
-      assert(locale.toString() == localeName, 'comparing "$locale" to "$localeName"');
-      return SynchronousFuture<CupertinoLocalizations>(thisPackage.getCupertinoTranslation(
+      assert(locale.toString() == localeName,
+          'comparing "$locale" to "$localeName"');
+      return SynchronousFuture<CupertinoLocalizations>(
+          thisPackage.getCupertinoTranslation(
         locale,
       ));
     });
@@ -144,5 +157,6 @@ class _CupertinoLocalizationsDelegate extends LocalizationsDelegate<CupertinoLoc
   bool shouldReload(_CupertinoLocalizationsDelegate old) => false;
 
   @override
-  String toString() => 'GlobalCupertinoLocalizations.delegate(${kMaterialSupportedLanguages.length} locales)';
+  String toString() =>
+      'GlobalCupertinoLocalizations.delegate(${kMaterialSupportedLanguages.length} locales)';
 }

@@ -21,15 +21,15 @@ import '../cupertino_localize.dart';
 /// The translations for Arabic (`ar`).
 class CupertinoLocalizationAr extends GlobalCupertinoLocalizations {
   CupertinoLocalizationAr({@required Locale locale}) : super(locale: locale);
-  static const List<String> _weekDays = <String>[
-    'الأحد',
-    'الإثنين',
-    'الثلاثاء',
-    'الأربعاء',
-    'الخميس',
-    'الجمعة',
-    'السبت',
-  ];
+  // static const List<String> _weekDays = <String>[
+  //   'الأحد',
+  //   'الإثنين',
+  //   'الثلاثاء',
+  //   'الأربعاء',
+  //   'الخميس',
+  //   'الجمعة',
+  //   'السبت',
+  // ];
   static const Map<String,String> _symbolMap = <String,String>{
     '1': '١',
     '2': '٢',

@@ -1,6 +1,7 @@
 # cupertino_localizations
 
-provider localization for cupertino. just en,ar and zh
+Provider localization for cupertino. just en,ar and zh 
+if you don't wont to use the default.
 You can use it to fixed the error: The getter 'pasteButtonLabel' was called on null.
 
 ## Usage

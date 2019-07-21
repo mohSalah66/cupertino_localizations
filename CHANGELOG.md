@@ -1,3 +1,10 @@
+## 1.0.0+1
+* Fix Readme and exmaple
+
+## 1.0.0
+* Added the example.
+* First Relase.
+
 ## 0.0.2+1
 * Fix Readme
 ## 0.0.2
