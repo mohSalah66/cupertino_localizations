@@ -1,5 +1,5 @@
 ## 1.0.0+1
-* Fix Readme and exmaple
+* Fix Readme and exmaple main.dart
 
 ## 1.0.0
 * Added the example.

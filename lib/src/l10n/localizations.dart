@@ -30,7 +30,7 @@ class CupertinoLocalizationAr extends GlobalCupertinoLocalizations {
   //   'الجمعة',
   //   'السبت',
   // ];
-  static const Map<String,String> _symbolMap = <String,String>{
+  static const Map<String, String> _symbolMap = <String, String>{
     '1': '١',
     '2': '٢',
     '3': '٣',
@@ -109,10 +109,12 @@ class CupertinoLocalizationAr extends GlobalCupertinoLocalizations {
   String datePickerHour(int hour) => _symbolMap[hour.toString()];
 
   @override
-  String datePickerHourSemanticsLabel(int hour) => _symbolMap[hour.toString()] + " ساعة";
+  String datePickerHourSemanticsLabel(int hour) =>
+      _symbolMap[hour.toString()] + " ساعة";
 
   @override
-  String datePickerMinute(int minute) => _symbolMap[minute.toString()].padLeft(2, '٠');
+  String datePickerMinute(int minute) =>
+      _symbolMap[minute.toString()].padLeft(2, '٠');
 
   @override
   String datePickerMinuteSemanticsLabel(int minute) {
